@@ -1,295 +1,495 @@
-/*
-    Astral by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+<!DOCTYPE HTML>
+<html>
 
-(function ($) {
-    var $window = $(window),
-        $body = $("body"),
-        $wrapper = $("#wrapper"),
-        $main = $("#main"),
-        $panels = $main.children(".panel"),
-        $nav = $("#nav"),
-        $nav_links = $nav.children("a");
+<head>
+    <title> Miko Photography｜女攝影師 · 個人寫真 · 私房寫真 · 電子寫真 </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="女攝影師｜私房寫真｜個人寫真｜電子寫真" />
+    <meta name="keywords" content="女攝影師,個人寫真,攝影師,rniko,miko,女攝,電子寫真,性感寫真,純欲,台北攝影,價格,日系,婚紗,費用,小喵,影像紀錄,浪漫,唯美" />
+    <meta property="og:title" content="𝙈𝙞𝙠𝙤 𝙋𝙝𝙤𝙩𝙤𝙜𝙧𝙖𝙥𝙝𝙮 " />
+    <meta property="og:image" content="images/me.jpg" />
+    <meta property="og:description" content="女攝影師｜私房寫真｜個人寫真｜cosplay主題拍攝｜Miko Photography @rniko__" />
+    <link rel="preload" href="assets/css/main.css" as="style" />
+    <link rel="preload" href="assets/css/images/bg.jpg" as="image" />
+    <link rel="preload" href="images/me.jpg" as="image" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <script src="assets/js/jquery.min.js"></script>
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+</head>
 
-    // Breakpoints.
-    breakpoints({
-        xlarge: ["1281px", "1680px"],
-        large: ["981px", "1280px"],
-        medium: ["737px", "980px"],
-        small: ["361px", "736px"],
-        xsmall: [null, "360px"],
-    });
 
-    // Play initial animations on page load.
-    $window.on("load", function () {
-        window.setTimeout(function () {
-            $body.removeClass("is-preload");
-        }, 100);
-    });
+<body class="is-preload" oncontextmenu="window.event.returnValue=false">
+    <img id='goTopButton' style='display: none; z-index: 5; cursor: pointer;' title='回到頂端' />
+    <div id="wrapper">
+        <!-- Nav -->
+        <div id="fade-in-icon">
+            <nav id="nav">
+                <a href="#home" class="icon solid fa-home" style="color:#735248;"
+                    onclick="showFooter()"><span><strong>Home</strong></span></a>
+                <a href="#info" class="icon solid fa-list" style="color:#735248;"
+                    onclick="showFooter()"><span><strong>Info</strong></span></a>
+                <a href="#work" class="icon solid fa-camera" style="color:#735248;"
+                    onclick="showFooter()"><span><strong>Portfolio</strong></span></a>
+                <a href="#contact" class="icon solid fa-comments" style="color:#735248;"
+                    onclick="hideFooter()"><span><strong>Contact</strong></span></a>
+            </nav>
+        </div>
 
-    // Nav.
-    $nav_links.on("click", function (event) {
-        function toggle_visibility(goTopButton) {
-            var href = $(this).attr("href");
+        <!-- Main -->
+        <div id="main">
 
-            // Not a panel link? Bail.
-            if (href.charAt(0) != "#" || $panels.filter(href).length == 0) return;
+            <!-- Me -->
+            <article id="home" class="panel intro">
+                <header>
+                    <a href="https://www.instagram.com/rniko__/" style="color:#665552;text-decoration:none;">
+                        <h1 id="fade-in-title1">𝙈𝙞𝙠𝙤 𝙋𝙝𝙤𝙩𝙤𝙜𝙧𝙖𝙥𝙝𝙮</h1>
+                    </a>
+                    <br>
+                    <p id="fade-in-text1" style="color:#8a817d;"> 用相機，</p>
+                    <p id="fade-in-text1" style="color:#8a817d;"> 紀錄下妳的每一個不經意。 </p>
+                </header>
+                <a href="#work" class="jumplink pic">
+                    <img src="images/me.jpg" alt="" />
+                </a>
+            </article>
 
-            // Prevent default.
-            event.preventDefault();
-            event.stopPropagation();
+            <!-- info -->
+            <article id="info" class="panel">
+                <h1>
+                    <center><strong>Information</strong>
+                </h1><br></center>
+                <div id="fade-in-content1">
+                    <center>
+                        <div class="phonesize"
+                            style="border: 15px #a68a81 solid; border-radius: 10px; background: #a68a81; opacity:0.88;">
+                            <center>
+                                <h2 id="fade-in-title2" style="font-family:Microsoft JhengHei;">✣ <strong
+                                        style="color: #ffffff;">服務項目</strong> ✣</h2>
+                            </center>
+                        </div><br>
+                        <div id="fade-in-content1">
+                            <center>
+                                <strong>
+                                    <a href="#work">
+                                        <h3 style="color: #3e95b3;display: inline;"><u>個人寫真</u></h3>
+                                    </a>
+                                </strong>
+                                ｜
+                                <strong>
+                                    <a href="#work">
+                                        <h3 style="color: #3e95b3;display: inline;"><u>電子寫真合作</u></h3>
+                                    </a>
+                                </strong>
+                                ｜
+                                <strong>
+                                    <a class="gotoCosplay" href="#work">
+                                        <h3 style="color: #3e95b3;display: inline; white-space: nowrap;"><u>特殊節日主題拍攝</u></h3>
+                                    </a>
+                                </strong>
+                            </center>
+                            <br>
+                        </div>
+                        <div class="phonesize"
+                            style="border: 15px #a68a81 solid; border-radius: 10px; background: #a68a81; opacity:0.88;">
+                            <center>
+                                <h2 id="fade-in-title2" style="font-family:Microsoft JhengHei;">✣ <strong
+                                        style="color: #ffffff;">拍攝流程</strong> ✣</h2>
+                            </center>
+                        </div><br>
+                        <strong>
+                            確認日期並交付訂金後，<br>可私訊討論服裝風格、選定地點等等。<br>
+                            拍攝完成五日內提供調色小檔雲端，<br>並於兩周內交付成片。<br><br>
+                            <h3 style="padding-bottom: 1%;">♡⋯⋯⋯⋯⋯ 注意事項 ⋯⋯⋯⋯⋯♡</h3>
+                            <h5 style="text-align: left; padding-left: 9%;">
+                                <li>拍攝地點以雙北地區為主，外縣市及較偏遠區域車馬費實報實銷。<br></li>
+                                <li>費用不含攝影棚及妝髮造型，如有需要可提供場地以及老師們作品作參考。<br></li>
+                                <li>每小時拍攝贈 3 張精修，可額外加購。交付格式為 .jpg 並提供 2 次修改。<br></li>
+                                <li>小盒子訊息容易被阻擋，若未收到回覆請直接來信。 <br></li>
+                            </h5>
+                        </strong>
+                    </center>
+            </article>
 
-            // Change panels.
-            if (window.location.hash != href) {
-                window.location.hash = href;
-
-                if (href == "#work") {
-                    window.document.getElementById("main").style.background =
-                        "rgba(250, 250, 250, 0.89)";
-                } else if (href == "#contact" || href == "#home" || href == "#info") {
-                    window.document.getElementById("main").style.background =
-                        "rgba(250, 250, 250, 0.85)";
-                }
-            }
-        }
-    });
-
-    // Panels.
-
-    // Initialize.
-    (function () {
-        var $panel, $link;
-
-        // Get panel, link.
-        if (window.location.hash) {
-            $panel = $panels.filter(window.location.hash);
-            $link = $nav_links.filter('[href="' + window.location.hash + '"]');
-        }
-
-        // No panel/link? Default to first.
-        if (!$panel || $panel.length == 0) {
-            $panel = $panels.first();
-            $link = $nav_links.first();
-        }
-
-        // Deactivate all panels except this one.
-        $panels.not($panel).addClass("inactive").hide();
-
-        // Activate link.
-        $link.addClass("active");
-
-        // Reset scroll.
-        $window.scrollTop(0);
-    })();
-
-    // Hashchange event.
-    $window.on("hashchange", function (event) {
-        var $panel, $link;
-
-        // Get panel, link.
-        if (window.location.hash) {
-            $panel = $panels.filter(window.location.hash);
-            $link = $nav_links.filter('[href="' + window.location.hash + '"]');
-
-            // No target panel? Bail.
-            if ($panel.length == 0) return;
-        }
-
-        // No panel/link? Default to first.
-        else {
-            $panel = $panels.first();
-            $link = $nav_links.first();
-        }
-
-        // Deactivate all panels.
-        $panels.addClass("inactive");
-
-        // Deactivate all links.
-        $nav_links.removeClass("active");
-
-        // Activate target link.
-        $link.addClass("active");
-
-        // Set max/min height.
-        $main
-            .css("max-height", $main.height() + "px")
-            .css("min-height", $main.height() + "px");
-
-        // Delay.
-        setTimeout(function () {
-            // Hide all panels.
-            $panels.hide();
-
-            // Show target panel.
-            $panel.show();
-
-            // Set new max/min height.
-            $main
-                .css("max-height", $panel.outerHeight() + "px")
-                .css("min-height", $panel.outerHeight() + "px");
-
-            // Reset scroll.
-            $window.scrollTop(0);
-
-            // Delay.
-            window.setTimeout(
-                function () {
-                    // Activate target panel.
-                    $panel.removeClass("inactive");
-
-                    // Clear max/min height.
-                    $main.css("max-height", "").css("min-height", "");
-
-                    // IE: Refresh.
-                    $window.triggerHandler("--refresh");
-
-                    // Unlock.
-                    locked = false;
-                },
-                breakpoints.active("small") ? 0 : 500,
-            );
-        }, 250);
-    });
-
-    // IE: Fixes.
-    if (browser.name == "ie") {
-        // Fix min-height/flexbox.
-        $window.on("--refresh", function () {
-            $wrapper.css("height", "auto");
-
-            window.setTimeout(function () {
-                var h = $wrapper.height(),
-                    wh = $window.height();
-
-                if (h < wh) $wrapper.css("height", "100vh");
-            }, 0);
-        });
-
-        $window.on("resize load", function () {
-            $window.triggerHandler("--refresh");
-        });
-
-        // Fix intro pic.
-        $(".panel.intro").each(function () {
-            var $pic = $(this).children(".pic"),
-                $img = $pic.children("img");
-
-            $pic
-                .css("background-image", "url(" + $img.attr("src") + ")")
-                .css("background-size", "cover")
-                .css("background-position", "center");
-
-            $img.css("visibility", "hidden");
-        });
-    }
-
-    // Google form
-    $("#google-form").submit(function (e) {
-        e.preventDefault();
-
-        if (
-            $("#email").val() &&
-            $("#name").val() &&
-            $("#phone").val() &&
-            $("#purpose").val() &&
-            $("#message").val()
-        ) {
-            $.ajax({
-                // url為Google Form按下submit的aciotn
-                url: "https://docs.google.com/forms/d/e/1FAIpQLSfUH5D9hPe7hOpMOZdUg-fpttOOKq9Eh2ypTz3dVIAUboVZpQ/formResponse",
-                crossDomain: true, //CORS problem
-                data: {
-                    "entry.1475828167": $("#email").val(),
-                    "entry.946793821": $("#name").val(),
-                    "entry.819294006": $("#phone").val(),
-                    "entry.362561278": $("#purpose").val(),
-                    "entry.1855613071": $("#message").val(),
-                },
-                type: "POST", //POST, insert value
-                dataType: "JSONP",
-                complete: function () {
-                    // console.log($('#email').val()+$('#name').val()+$('#phone').val()+$('#purpose').val()+$('#time1').val()+$('#time2').val()+$('#message').val());
-                    //init all
-                    $("#email").val("");
-                    $("#name").val("");
-                    $("#phone").val("");
-                    $("#purpose").val("- 來信目的");
-                    $("#message").val("");
-                    //Show alert box
-                    alert(
-                        "- 𝙈𝙞𝙠𝙤 𝙋𝙝𝙤𝙩𝙤𝙜𝙧𝙖𝙥𝙝𝙮 -\n\n 🤍 已收到您填寫的表單\n 🤍 一人作業請靜候 𝘌-𝘮𝘢𝘪𝘭 回覆.ᐟ.ᐟ",
-                    );
-                },
-            });
-        } else {
-            alert(
-                "- 𝙈𝙞𝙠𝙤 𝙋𝙝𝙤𝙩𝙤𝙜𝙧𝙖𝙥𝙝𝙮 -\n\n 資料好像沒有填寫完整哦 ( ˘•ω•˘ ).ᐟ.ᐟ\n\n",
-            );
-        }
-    });
-    $("#gotoActivity").on("click", function (event) {
-        setTimeout(function () {
-            location.href = "#activity";
-        }, 800);
-    });
-
-    $(".gotoCosplay").on("click", function (event) {
-        setTimeout(function () {
-            location.href = "#cosplay";
-        }, 800);
-    });
-
-    var intervalId;
-    $(".pic")
-        .mousedown(function (e) {
-            intervalId = setInterval(function () {
-                alert("被你發現彩蛋了！送你一朵花\n(ゝ∀･)⌒✿");
-                clearInterval(intervalId);
-            }, 6000);
-        })
-        .mouseup(function () {
-            clearInterval(intervalId);
-        });
-
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 3800); // Change image every 2 seconds
-    }
-
-})(jQuery);
-
-function hideFooter(){
-    $("#footer").hide();
-}
-
-function showFooter(){
-    $("#footer").show();
-}
-
-/*隱藏按鈕
-            
-            
-
-                if (window.location.hash != href){
-                        window.location.hash = href;
-                            if(href == "#work"){
-                                $(".goTopButton").show();
+            <!-- Work -->
+            <article id="work" class="panel">
+                <header>
+                    <center>
+                        <h1 id="fade-in-title2">Portfolio</h1>
+                    </center><br>
+                    <div class="phonesize"
+                        style="border: 15px #a68a81 solid; border-radius: 3.5px; background: #a68a81; opacity:0.75;">
+                        <center>
+                            <h2 id="fade-in-title2" style="font-family:Microsoft JhengHei;">✣ <strong
+                                    style="color: #ffffff;">寫真集 · 桌曆拍攝</strong> ✣</h2>
+                        </center>
+                    </div><br>
+                    <a class="image centered"><img style="border-radius: 20px; opacity: 95%;" src="images/U2023.JPG"
+                            alt=""></a>
+                    <br>
+                    <br>
+                    <div class="phonesize"
+                        style="border: 15px #a68a81 solid; border-radius: 3.5px; background: #a68a81; opacity:0.75;">
+                        <center>
+                            <h2 id="fade-in-title2" style="font-family:Microsoft JhengHei;">✣ <strong
+                                    style="color: #ffffff;">私房寫真 · 個人寫真</strong> ✣</h2>
+                        </center>
+                    </div>
+                </header>
+                <!-- 往上按鈕<p> -->
+                <script>
+                    //<![CDATA[
+                    (function (goTopButton) {
+                        var img = "assets/css/images/button.png",
+                            locatioin = 0.8, // 按鈕出現在螢幕的高度
+                            position = 20;
+                        right = 10, // 距離右邊 px 值
+                            opacity = 0.5, // 透明度
+                            speed = 500, // 捲動速度+
+                            $button = $("#goTopButton"),
+                            $body = $(document),
+                            $win = $(window);
+                        $button.attr("src", img);
+                        $button.on({
+                            mouseover: function () { $button.css("opacity", 0.8); },
+                            mouseout: function () { $button.css("opacity", opacity); },
+                            click: function () { $("html, body").animate({ scrollTop: 0 }, speed); }
+                        });
+                        window.goTopMove = function () {
+                            var scrollH = $body.scrollTop(),
+                                winH = $win.height(),
+                                css = { "top": winH * locatioin + "px", "position": "fixed", "right": right, "opacity": opacity };
+                            if (scrollH > 800) {
+                                // console.log(scrollH);
+                                $button.css(css);
+                                $button.fadeIn("slow");
+                            } else {
+                                $button.fadeOut("slow");
                             }
-                            else{
-                                $(".goTopButton").hide("fast");
-                            }
-                        }*/
+                        };
+                        $win.on({
+                            scroll: function () { goTopMove(); },
+                            resize: function () { goTopMove(); }
+                        });
+                    })();
+                </script>
+
+
+
+                <!-- pic -->
+                <section>
+                    <div id="fade-in-portfolio">
+                        <div class="row">
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image fit"><img src="images/u-birth-1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image fit"><img src="images/u-birth-2.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image fit"><img src="images/u-birth-3.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/u-cafe-1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/u-cafe-排版.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/u-cafe-3.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/u-中山-1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/u-中山-2.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/u-中山-3.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/sandy-居家-1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/sandy-居家-2.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/sandy-居家-3.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/sandy-居家2-1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/sandy-居家2-排版.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/sandy-居家2-3.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image bottomed"><img src="images/zoe-beach-1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image bottomed"><img src="images/zoe-beach-2.jpg" alt=""></a>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <a class="image bottomed"><img src="images/zoe-beach-3.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/ale3.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/ale4.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/zoe3.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/zoe1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image bottomed"><img src="images/又純4.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image bottomed"><img src="images/又純2.jpg" alt=""></a>
+                            </div>
+                            <div class="">
+                                <a class="image centered"><img src="images/helene1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/ale1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/ale2.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/Zoe旅1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/Zoe旅2.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/sana1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-6 col-6-medium col-12-small">
+                                <a class="image centered"><img src="images/sana2.jpg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <br>
+                <div id="cosplay">
+                    <div class="phonesize"
+                        style="border: 15px #a68a81 solid; border-radius: 3.5px; background: #a68a81; opacity:0.75;">
+                        <center>
+                            <h2 id="fade-in-title2" style="font-family:Microsoft JhengHei;">✣ <strong
+                                    style="color: #ffffff;">COSPLAY · 特殊主題寫真</strong> ✣</h2>
+                        </center>
+                    </div><br>
+                </div>
+
+                <div class="phonesize"
+                    style="border: 7px #ededed solid !important; border-radius: 2px; background: #ededed; opacity:0.75;">
+                    <center>
+                        <h3 id="fade-in-title2" style="font-family:Microsoft JhengHei;">· <strong
+                                style="color: #ffffff;">聖誕主題寫真</strong> ·</h3>
+                    </center>
+                </div>
+
+                <div class="row">
+
+                    <div class="">
+                        <a class="image centered"><img src="images/xmas1.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/xmas2.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/xmas-bb.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/xmas-bb2.jpg" alt=""></a>
+                    </div>
+                </div><br><br>
+
+
+                <div class="phonesize"
+                    style="border: 7px #ededed solid !important; border-radius: 2px; background: #ededed; opacity:0.75;">
+                    <center>
+                        <h3 id="fade-in-title2" style="font-family:Microsoft JhengHei;">· <strong
+                                style="color: #ffffff;">新年主題寫真</strong> ·</h3>
+                    </center>
+                </div>
+
+
+                <div class="row">
+                    <div class="">
+                        <a class="image centered"><img src="images/dou1.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/dou2.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/dou3.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/dou4.jpg" alt=""></a>
+                    </div>
+                </div><br><br>
+                <div class="phonesize"
+                    style="border: 7px #ededed solid !important; border-radius: 2px; background: #ededed; opacity:0.75;">
+                    <center>
+                        <h3 id="fade-in-title2" style="font-family:Microsoft JhengHei;">· <strong
+                                style="color: #ffffff;">制服寫真</strong> ·</h3>
+                    </center>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/bonnie1.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/bonnie2.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/bonnie3.jpg" alt=""></a>
+                    </div>
+                </div><br><br>
+                <div class="phonesize"
+                    style="border: 7px #ededed solid !important; border-radius: 2px; background: #ededed; opacity:0.75;">
+                    <center>
+                        <h3 id="fade-in-title2" style="font-family:Microsoft JhengHei;">· <strong
+                                style="color: #a68a81;">cosplay寫真</strong> ·</h3>
+                    </center>
+                </div>
+                <div class="row">
+                    <div class="">
+                        <a class="image centered"><img src="images/sandy1.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/sandy3.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/sandy2.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a class="image centered"><img src="images/sandy4.jpg" alt=""></a>
+                    </div>
+                    <div class="">
+                        <a class="image centered"><img src="images/sandy5.jpg" alt=""></a>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="phonesize"
+                    style="border: 7px #ededed solid !important; border-radius: 2px; background: #ededed; opacity:0.75;">
+                    <center>
+                        <h3 id="fade-in-title2" style="font-family:Microsoft JhengHei;">· <strong
+                                style="color: #a68a81;">電子寫真作品</strong> ·</h3>
+                    </center>
+                </div>
+                <br>
+
+
+                <div id="activity">
+                    <div class="phonesize"
+                        style="border: 15px #a68a81 solid; border-radius: 3.5px; background: #a68a81;  opacity: 0.88;">
+                        <center>
+                            <h2 style="font-family:Microsoft JhengHei;">✣ <strong style="color: #ededed;">活動紀錄</strong>
+                                ✣</h2>
+                        </center>
+                    </div>
+                </div>
+                <section>
+                    <center><br>
+                        <div id="fade-in-text2-2" style="color:#8a817d;"> 生命中的片段，不只是回憶 </div>
+                    </center><br>
+                    <div class="col-4 col-6-medium col-12-small">
+
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+
+
+                        <div class="slideshow-container">
+                            <div class="mySlides" id="fade-in-portfolio">
+                                <a href="https://www.instagram.com/p/CONL3MVHdMe/?igshid=NWRhNmQxMjQ%3D&fbclid=IwAR3UPjdBiQRL3Fe3_0RItrEwnrCcA2D81YARyd_qkfcQwU43H2ghUsMbD6s"
+                                    class=""><img src="images/活動1.jpg" width="100%" alt=""></a>
+                            </div>
+                            <div class="mySlides" id="fade-in-portfolio">
+                                <a href="https://www.instagram.com/p/CcyAB1hBThD/?fbclid=IwAR31_H3RN9Npxqd4gYRTxviXK0dOwTBnRVgrtuOPPR6bjMvP7Kqkxa0SdSA"
+                                    class=""><img src="images/活動2.jpg" width="100%" alt=""></a>
+                            </div>
+                            <a class="prev">❮</a>
+                            <a class="next">❯</a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+
+                    </div>
+                </section>
+
+                </center>
+
+                <div class="phonesize"
+                    style="border: 10px #a68a81 solid; border-radius: 20px; background: #a68a81; opacity:0.7;">
+                    <center><a href="https://rniko.me/#work" style="color:#ededed; text-decoration:none;">
+                            <h6 style="color:#ededed;"> 回到最上方 </h6>
+                        </a>
+                    </center>
+                </div>
+
+
+
+            </article>
+            <!-- Contact-->
+            <article id="contact" class="panel">
+                <!-- <style>
+                    #footer {
+                        display: none !important;
+                    }
+                </style> -->
+
+
+
+
+                <center>
+                    <h1 id="fade-in-title2" ; style="opacity:0.8;">Miko Hsu</h1>
+                </center><br>
+                <div>
+                    <center>
+                        <a href="https://www.instagram.com/rniko__/" target="_blank" class="icon brands fa-instagram"
+                            style="color: #916f66;"> 𝘳𝘯𝘪𝘬𝘰__ </a>
+
+                        <a href="mailto:miikohsu@gmail.com" class="icon light fa-envelope" style="color:#916f66;">
+                            𝘮𝘪𝘪𝘬𝘰𝘩𝘴𝘶<i><strong>@</strong></i>𝘨𝘮𝘢𝘪𝘭.𝘤𝘰𝘮</a>
+                </div>
+            </article>
+
+
+        </div>
+        <!-- Footer -->
+        <div id="footer">
+            <a href="https://www.instagram.com/rniko__/" target="_blank" class="icon brands fa-instagram"
+                style="color: #916f66;"> 𝘳𝘯𝘪𝘬𝘰__ </a>
+            <a style="color: #916f66;"> ︳ </a>
+            <a href="mailto:miikohsu@gmail.com" class="icon light fa-envelope" style="color:#916f66;">
+                𝘮𝘪𝘪𝘬𝘰𝘩𝘴𝘶<i><strong>@</strong></i>𝘨𝘮𝘢𝘪𝘭.𝘤𝘰𝘮</a>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+
+</html>
